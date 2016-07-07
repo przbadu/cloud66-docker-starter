@@ -1,0 +1,18 @@
+---
+services:
+  freewheeler:
+    git_url: git@bitbucket.org:username/app.git
+    git_branch: master
+    deploy_command: bundle exec rake db:migrate
+    build_root: .
+    ports:
+    - container: 80
+      http: 80
+      https: 443
+
+  delayed_job:
+    git_url: git@bitbucket.org:username/app.git
+    git_branch: master
+    command: bundle exec rake jobs:work
+    ports:
+    - container: 80

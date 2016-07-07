@@ -7,7 +7,7 @@ configurationss.
 Configurations:
 
 - You need to push your `database.yml` file so don't ignore it
-- `env` file is just a text file with `key=value` pairs for your environment variables, which we can import directly in `cloud66`
+- `env` file is just a text file with `key=value` pairs for your environment variables, which we can import directly in `cloud66`. Your your required ENV variables here.
 - `Dockerfile` is a docker configuration file, you can user your own.
 - `docker-compose` not required really, but if you want to test docker configurations locally.
 - `nginx.conf` because I am using nginx to serve rails application. You can skip it if you are using something like `puma` or `unicorn`. Also *NOTE* that I am using phusion/passenger image in Dockerfile.

@@ -1,0 +1,17 @@
+---
+web:
+  build: .
+  ports:
+    - "80:80"
+  env_file:
+    - .env.prod
+  volumes:
+    - .:/tmp
+
+worker:
+  build: .
+  command: bundle exec rake jobs:work
+  env_file:
+    - .env.prod
+  volumes:
+    - .:/tmp
